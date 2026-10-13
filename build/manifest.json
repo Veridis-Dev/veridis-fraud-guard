@@ -1,0 +1,46 @@
+{
+  "assets/fonts/geist/Geist-Bold.woff2": {
+    "file": "assets/Geist-Bold-0lSQGeiz.woff2",
+    "src": "assets/fonts/geist/Geist-Bold.woff2"
+  },
+  "assets/fonts/geist/Geist-Medium.woff2": {
+    "file": "assets/Geist-Medium-BcFMcFHY.woff2",
+    "src": "assets/fonts/geist/Geist-Medium.woff2"
+  },
+  "assets/fonts/geist/Geist-Regular.woff2": {
+    "file": "assets/Geist-Regular-B6Z79stV.woff2",
+    "src": "assets/fonts/geist/Geist-Regular.woff2"
+  },
+  "assets/fonts/geist/Geist-SemiBold.woff2": {
+    "file": "assets/Geist-SemiBold-D0qwOn7H.woff2",
+    "src": "assets/fonts/geist/Geist-SemiBold.woff2"
+  },
+  "src/AdminApp/main.tsx": {
+    "file": "assets/app-AP9jCLmp.js",
+    "name": "app",
+    "src": "src/AdminApp/main.tsx",
+    "isEntry": true,
+    "css": [
+      "assets/app-B8WyPSHK.css"
+    ],
+    "assets": [
+      "assets/Geist-Regular-B6Z79stV.woff2",
+      "assets/Geist-Medium-BcFMcFHY.woff2",
+      "assets/Geist-SemiBold-D0qwOn7H.woff2",
+      "assets/Geist-Bold-0lSQGeiz.woff2"
+    ]
+  },
+  "src/OrderPanel/main.ts": {
+    "file": "assets/orderPanel-BrV5x9DE.js",
+    "name": "orderPanel",
+    "src": "src/OrderPanel/main.ts",
+    "isEntry": true,
+    "css": [
+      "assets/orderPanel-VoBeSQ06.css"
+    ],
+    "assets": [
+      "assets/Geist-Regular-B6Z79stV.woff2",
+      "assets/Geist-SemiBold-D0qwOn7H.woff2"
+    ]
+  }
+}

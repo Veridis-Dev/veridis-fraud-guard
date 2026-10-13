@@ -1,0 +1,63 @@
+@font-face {
+  font-family: "Veridis Fraud Guard Geist";
+  src: url("../../../assets/fonts/geist/Geist-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Veridis Fraud Guard Geist";
+  src: url("../../../assets/fonts/geist/Geist-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Veridis Fraud Guard Geist";
+  src: url("../../../assets/fonts/geist/Geist-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Veridis Fraud Guard Geist";
+  src: url("../../../assets/fonts/geist/Geist-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+.vfg-app {
+  --vfg-primary: #059669;
+  --vfg-primary-dark: #047857;
+  --vfg-primary-deep: #065f46;
+  --vfg-ink: #111827;
+  --vfg-muted: #6b7280;
+  --vfg-white: #ffffff;
+  --vfg-surface: #f9fafb;
+  --vfg-border: #e5e7eb;
+  --vfg-success-bg: #ecfdf5;
+  --vfg-info: #1d4ed8;
+  --vfg-info-bg: #eff6ff;
+  --vfg-warning: #92400e;
+  --vfg-warning-bg: #fffbeb;
+  --vfg-error: #b91c1c;
+  --vfg-error-bg: #fef2f2;
+  --vfg-space-1: 4px;
+  --vfg-space-2: 8px;
+  --vfg-space-3: 12px;
+  --vfg-space-4: 16px;
+  --vfg-space-5: 20px;
+  --vfg-space-6: 24px;
+  --vfg-space-8: 32px;
+  --vfg-radius: 12px;
+  --vfg-radius-sm: 6px;
+  --vfg-shadow-sm: 0 1px 2px rgb(0 0 0 / 4%);
+  --vfg-shadow-lg: 0 10px 40px rgb(0 0 0 / 6%);
+  --vfg-font: "Veridis Fraud Guard Geist", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --vfg-text-xs: 12px;
+  --vfg-text-sm: 13px;
+  --vfg-text-base: 14px;
+  --vfg-text-lg: 16px;
+  --vfg-text-xl: 22px;
+}

@@ -1,0 +1,31 @@
+.wp-list-table .column-veridis_fraud_guard {
+  width: 116px;
+}
+
+.vfg-order-list-status {
+  display: inline-flex;
+  min-height: 22px;
+  align-items: center;
+  justify-content: center;
+  padding: 2px 7px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  background: #f8fafc;
+  color: #475569;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.35;
+  white-space: nowrap;
+}
+
+.vfg-order-list-status.is-clear {
+  border-color: rgb(4 120 87 / 20%);
+  background: rgb(16 185 129 / 7%);
+  color: #047857;
+}
+
+.vfg-order-list-status.is-blocked {
+  border-color: rgb(185 28 28 / 20%);
+  background: rgb(185 28 28 / 6%);
+  color: #b91c1c;
+}

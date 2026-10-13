@@ -1,0 +1,826 @@
+@font-face {
+  font-family: "Veridis Fraud Guard Geist";
+  src: url("../../assets/fonts/geist/Geist-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Veridis Fraud Guard Geist";
+  src: url("../../assets/fonts/geist/Geist-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+#veridis-fraud-guard-order {
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgb(0 0 0 / 4%);
+}
+
+#veridis-fraud-guard-order .postbox-header {
+  border-bottom-color: #e5e7eb;
+  background: #fff;
+}
+
+#veridis-fraud-guard-order .hndle {
+  color: #111827;
+  font: 600 13px/1.4 "Veridis Fraud Guard Geist", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+#veridis-fraud-guard-order .hndle::before {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  margin-right: 8px;
+  border-radius: 50%;
+  background: #059669;
+  box-shadow: 0 0 0 4px #ecfdf5;
+  content: "";
+}
+
+#veridis-fraud-guard-order .handle-actions button:focus-visible {
+  outline: 2px solid #059669;
+  outline-offset: -2px;
+  box-shadow: none;
+}
+
+#veridis-fraud-guard-order .inside {
+  margin: 0;
+  padding: 0;
+}
+
+.vfg-order-panel {
+  --vfg-primary: #059669;
+  --vfg-primary-dark: #047857;
+  --vfg-primary-deep: #065f46;
+  --vfg-ink: #111827;
+  --vfg-muted: #6b7280;
+  --vfg-white: #fff;
+  --vfg-surface: #f9fafb;
+  --vfg-border: #e5e7eb;
+  --vfg-success-bg: #ecfdf5;
+  --vfg-success-border: #a7f3d0;
+  --vfg-warning: #b45309;
+  --vfg-warning-deep: #92400e;
+  --vfg-warning-bg: #fffbeb;
+  --vfg-warning-border: #fde68a;
+  --vfg-action: #2563eb;
+  --vfg-action-dark: #1d4ed8;
+  --vfg-action-bg: #eff6ff;
+  --vfg-action-border: #bfdbfe;
+  --vfg-error: #b91c1c;
+  --vfg-error-deep: #991b1b;
+  --vfg-error-bg: #fef2f2;
+  --vfg-error-border: #fecaca;
+  position: relative;
+  padding: 12px;
+  color: var(--vfg-ink);
+  font: 400 13px/1.4 "Veridis Fraud Guard Geist", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.vfg-order-panel *,
+.vfg-order-panel *::before,
+.vfg-order-panel *::after {
+  box-sizing: border-box;
+}
+
+.vfg-order-panel__status {
+  display: flex;
+  min-height: 42px;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+  padding: 9px 11px;
+  border: 1px solid var(--vfg-success-border);
+  border-radius: 6px;
+  background: var(--vfg-success-bg);
+  color: var(--vfg-primary-deep);
+  font-size: 13px;
+}
+
+.vfg-order-panel__status.has-blocked {
+  border-color: var(--vfg-error-border);
+  background: var(--vfg-error-bg);
+  color: var(--vfg-error-deep);
+}
+
+.vfg-order-panel__status-mark {
+  display: grid;
+  width: 22px;
+  height: 22px;
+  flex: 0 0 22px;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--vfg-primary);
+  color: var(--vfg-white);
+}
+
+.vfg-order-panel__status-mark::after {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1;
+  content: "✓";
+}
+
+.vfg-order-panel__status.has-blocked .vfg-order-panel__status-mark {
+  background: var(--vfg-error);
+}
+
+.vfg-order-panel__status.has-blocked .vfg-order-panel__status-mark::after {
+  content: "!";
+}
+
+.vfg-order-panel__status strong {
+  display: block;
+  font-weight: 600;
+}
+
+.vfg-order-panel__status-copy {
+  display: grid;
+  min-width: 0;
+  gap: 1px;
+}
+
+.vfg-order-panel__status-copy > span {
+  color: currentColor;
+  font-size: 12px;
+  line-height: 1.45;
+  opacity: 0.82;
+  overflow-wrap: anywhere;
+}
+
+.vfg-order-panel__checkout-notice {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  margin-bottom: 8px;
+  padding: 9px 10px;
+  border: 1px solid var(--vfg-warning-border);
+  border-radius: 6px;
+  background: var(--vfg-warning-bg);
+  color: var(--vfg-warning-deep);
+}
+
+.vfg-order-panel__checkout-notice-mark {
+  display: grid;
+  width: 20px;
+  height: 20px;
+  flex: 0 0 20px;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--vfg-warning);
+  color: var(--vfg-white);
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.vfg-order-panel__checkout-notice-copy {
+  display: grid;
+  min-width: 0;
+  gap: 2px;
+}
+
+.vfg-order-panel__checkout-notice-copy strong {
+  font-size: 12.5px;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.vfg-order-panel__checkout-notice-copy > span {
+  color: #78350f;
+  font-size: 12px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.vfg-order-panel__summary {
+  display: grid;
+  margin: 0 0 10px;
+  padding: 4px 0;
+  border-top: 1px solid var(--vfg-border);
+  border-bottom: 1px solid var(--vfg-border);
+}
+
+.vfg-order-panel__summary > div {
+  display: grid;
+  min-width: 0;
+  min-height: 28px;
+  grid-template-columns: 20px minmax(0, 1fr);
+  align-items: center;
+  gap: 7px;
+}
+
+.vfg-order-panel__summary dt,
+.vfg-order-panel__summary dd {
+  min-width: 0;
+  margin: 0;
+}
+
+.vfg-order-panel__summary dt {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--vfg-muted);
+}
+
+.vfg-order-panel__summary dt .dashicons {
+  width: 16px;
+  height: 16px;
+  font-size: 15px;
+  line-height: 16px;
+}
+
+.vfg-order-panel__summary dd {
+  overflow: hidden;
+  color: var(--vfg-ink);
+  font-size: 12.5px;
+  font-weight: 500;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.vfg-order-panel__primary {
+  position: relative;
+  display: flex;
+  width: 100%;
+  min-height: 38px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 7px 12px;
+  border: 1px solid var(--vfg-error);
+  border-radius: 6px;
+  background: var(--vfg-error);
+  color: var(--vfg-white);
+  box-shadow: 0 4px 8px -2px rgb(185 28 28 / 24%);
+  cursor: pointer;
+  font: 600 12px/1.4 "Veridis Fraud Guard Geist", ui-sans-serif, system-ui, sans-serif;
+  text-align: left;
+  transition: background 150ms ease, border-color 150ms ease;
+}
+
+.vfg-order-panel__primary:hover {
+  border-color: var(--vfg-error-deep);
+  background: var(--vfg-error-deep);
+  color: var(--vfg-white);
+}
+
+.vfg-order-panel__primary[data-primary-action='manage'] {
+  min-height: 34px;
+  border-color: var(--vfg-action-border);
+  background: var(--vfg-white);
+  color: var(--vfg-action-dark);
+  box-shadow: none;
+}
+
+.vfg-order-panel__primary[data-primary-action='manage']:hover {
+  border-color: #93c5fd;
+  background: var(--vfg-action-bg);
+  color: var(--vfg-action-dark);
+}
+
+.vfg-order-panel__primary-arrow {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.vfg-order-panel__primary:focus-visible,
+.vfg-order-panel__button:focus-visible,
+.vfg-order-panel__details > summary:focus-visible {
+  outline: 2px solid var(--vfg-action);
+  outline-offset: 2px;
+  box-shadow: none;
+}
+
+.vfg-order-panel__primary:disabled {
+  cursor: wait;
+  opacity: 0.62;
+}
+
+.vfg-order-panel__primary.is-loading [data-vfg-primary-label],
+.vfg-order-panel__primary.is-loading .vfg-order-panel__primary-arrow {
+  opacity: 0;
+}
+
+.vfg-order-panel__primary .vfg-order-panel__spinner {
+  border-color: rgb(255 255 255 / 36%);
+  border-top-color: var(--vfg-white);
+}
+
+.vfg-order-panel__primary[data-primary-action='manage'] .vfg-order-panel__spinner {
+  border-color: rgb(37 99 235 / 22%);
+  border-top-color: var(--vfg-action);
+}
+
+.vfg-order-panel__details {
+  overflow: hidden;
+  border: 1px solid var(--vfg-border);
+  border-radius: 6px;
+  background: var(--vfg-white);
+}
+
+.vfg-order-panel__details > summary {
+  display: flex;
+  min-height: 34px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 7px 10px;
+  color: var(--vfg-muted);
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  list-style: none;
+  transition: background 150ms ease, color 150ms ease;
+}
+
+.vfg-order-panel__details > summary::-webkit-details-marker {
+  display: none;
+}
+
+.vfg-order-panel__details > summary:hover,
+.vfg-order-panel__details[open] > summary {
+  background: var(--vfg-surface);
+  color: var(--vfg-action-dark);
+}
+
+.vfg-order-panel__chevron {
+  width: 7px;
+  height: 7px;
+  transform: rotate(45deg);
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transition: transform 150ms ease;
+}
+
+.vfg-order-panel__details[open] .vfg-order-panel__chevron {
+  transform: rotate(225deg);
+}
+
+.vfg-order-panel__identifiers {
+  padding: 2px 10px 5px;
+  border-top: 1px solid var(--vfg-border);
+}
+
+.vfg-order-panel__row {
+  position: relative;
+  display: grid;
+  min-width: 0;
+  grid-template-columns: minmax(76px, 1fr) auto;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--vfg-border);
+}
+
+.vfg-order-panel__row:last-child {
+  border-bottom: 0;
+}
+
+.vfg-order-panel__content {
+  min-width: 0;
+}
+
+.vfg-order-panel__label {
+  display: block;
+  margin-bottom: 1px;
+  color: var(--vfg-muted);
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.035em;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
+.vfg-order-panel__value {
+  display: block;
+  overflow: hidden;
+  color: var(--vfg-ink);
+  font-size: 12.5px;
+  font-weight: 500;
+  line-height: 1.35;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.vfg-order-panel__meta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.vfg-order-panel__button {
+  position: relative;
+  display: inline-flex;
+  min-width: 54px;
+  min-height: 26px;
+  align-items: center;
+  justify-content: center;
+  padding: 3px 7px;
+  border: 1px solid var(--vfg-action-border);
+  border-radius: 5px;
+  background: var(--vfg-white);
+  color: var(--vfg-action-dark);
+  cursor: pointer;
+  font: 600 10.5px/1.3 "Veridis Fraud Guard Geist", ui-sans-serif, system-ui, sans-serif;
+  transition: background 150ms ease, border-color 150ms ease, color 150ms ease;
+}
+
+.vfg-order-panel__button:hover {
+  border-color: #93c5fd;
+  background: var(--vfg-action-bg);
+  color: var(--vfg-action-dark);
+}
+
+.vfg-order-panel__button.is-unblock,
+.vfg-order-panel__button.is-danger {
+  border-color: var(--vfg-error-border);
+  color: var(--vfg-error);
+}
+
+.vfg-order-panel__button.is-unblock:hover,
+.vfg-order-panel__button.is-danger:hover {
+  background: var(--vfg-error-bg);
+  color: var(--vfg-error-deep);
+}
+
+.vfg-order-panel__button.is-quiet {
+  border-color: transparent;
+  background: transparent;
+  color: var(--vfg-muted);
+}
+
+.vfg-order-panel__button.is-quiet:hover {
+  background: #eef1f4;
+  color: var(--vfg-ink);
+}
+
+.vfg-order-panel__button:disabled {
+  cursor: wait;
+}
+
+.vfg-order-panel__button:disabled:not(.is-loading) {
+  opacity: 0.5;
+}
+
+.vfg-order-panel__button.is-loading [data-vfg-button-label] {
+  opacity: 0;
+}
+
+.vfg-order-panel__spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: none;
+  width: 11px;
+  height: 11px;
+  margin: -5.5px 0 0 -5.5px;
+  border: 2px solid rgb(37 99 235 / 22%);
+  border-top-color: var(--vfg-action);
+  border-radius: 50%;
+  animation: vfg-order-spin 700ms linear infinite;
+}
+
+.vfg-order-panel__button.is-loading .vfg-order-panel__spinner {
+  display: block;
+}
+
+.vfg-order-panel__button.is-danger .vfg-order-panel__spinner {
+  border-color: rgb(185 28 28 / 22%);
+  border-top-color: var(--vfg-error);
+}
+
+.vfg-order-panel__unavailable {
+  color: var(--vfg-muted);
+  font-size: 11.5px;
+  line-height: 1.4;
+}
+
+.vfg-order-panel__empty {
+  margin: 0;
+  padding: 9px 10px;
+  border-radius: 6px;
+  background: var(--vfg-surface);
+  color: var(--vfg-muted);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.vfg-order-panel__sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.vfg-order-modal-backdrop {
+  position: fixed;
+  z-index: 100000;
+  inset: 0;
+  display: grid;
+  padding: 20px;
+  place-items: center;
+  background: rgb(17 24 39 / 48%);
+  backdrop-filter: blur(2px);
+}
+
+.vfg-order-modal,
+.vfg-order-modal * {
+  box-sizing: border-box;
+}
+
+.vfg-order-modal {
+  width: min(400px, 100%);
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 24px 70px rgb(0 0 0 / 24%);
+  color: #111827;
+  font: 400 13px/1.45 "Veridis Fraud Guard Geist", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.vfg-order-modal:focus {
+  outline: none;
+}
+
+.vfg-order-modal__header {
+  display: flex;
+  min-height: 58px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 18px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.vfg-order-modal__header h3 {
+  margin: 0;
+  color: #111827;
+  font: 600 16px/1.35 "Veridis Fraud Guard Geist", ui-sans-serif, system-ui, sans-serif;
+}
+
+.vfg-order-modal__close {
+  display: grid;
+  width: 30px;
+  height: 30px;
+  flex: 0 0 30px;
+  padding: 0;
+  place-items: center;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: #6b7280;
+  cursor: pointer;
+  font: 400 20px/1 "Veridis Fraud Guard Geist", ui-sans-serif, system-ui, sans-serif;
+}
+
+.vfg-order-modal__close:hover {
+  background: #f3f4f6;
+  color: #111827;
+}
+
+.vfg-order-modal__body {
+  padding: 18px;
+}
+
+.vfg-order-modal__identifier {
+  display: grid;
+  gap: 5px;
+  padding: 12px 14px;
+  border-radius: 6px;
+  background: #f9fafb;
+}
+
+.vfg-order-modal__type {
+  color: #6b7280;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.vfg-order-modal__identifier strong {
+  color: #111827;
+  font-size: 13px;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.vfg-order-modal__body p {
+  margin: 12px 0 0;
+  color: #6b7280;
+  font-size: 12px;
+}
+
+.vfg-order-modal__footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 13px 18px;
+  border-top: 1px solid #e5e7eb;
+  background: #f9fafb;
+}
+
+.vfg-order-modal__button {
+  position: relative;
+  display: inline-flex;
+  min-height: 36px;
+  align-items: center;
+  justify-content: center;
+  padding: 7px 14px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  cursor: pointer;
+  font: 600 12px/1.4 "Veridis Fraud Guard Geist", ui-sans-serif, system-ui, sans-serif;
+}
+
+.vfg-order-modal__button.is-secondary {
+  border-color: #d1d5db;
+  background: #fff;
+  color: #111827;
+}
+
+.vfg-order-modal__button.is-secondary:hover {
+  border-color: #9ca3af;
+  background: #f3f4f6;
+}
+
+.vfg-order-modal__button.is-primary {
+  background: #2563eb;
+  color: #fff;
+}
+
+.vfg-order-modal__button.is-primary:hover {
+  background: #1d4ed8;
+}
+
+.vfg-order-modal__button.is-danger {
+  background: #b91c1c;
+  color: #fff;
+}
+
+.vfg-order-modal__button.is-danger:hover {
+  background: #991b1b;
+}
+
+.vfg-order-modal__button:disabled,
+.vfg-order-modal__close:disabled {
+  cursor: wait;
+  opacity: 0.68;
+}
+
+.vfg-order-modal__button:focus-visible,
+.vfg-order-modal__close:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+  box-shadow: none;
+}
+
+.vfg-order-modal__spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: none;
+  width: 12px;
+  height: 12px;
+  margin: -6px 0 0 -6px;
+  border: 2px solid rgb(255 255 255 / 42%);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: vfg-order-spin 700ms linear infinite;
+}
+
+.vfg-order-modal__button.is-loading > span:first-child {
+  opacity: 0;
+}
+
+.vfg-order-modal__button.is-loading .vfg-order-modal__spinner {
+  display: block;
+}
+
+.vfg-order-toasts {
+  position: fixed;
+  z-index: 100001;
+  right: 24px;
+  bottom: 24px;
+  width: min(380px, calc(100vw - 48px));
+  pointer-events: none;
+}
+
+.vfg-order-toast {
+  display: flex;
+  min-height: 48px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 11px 12px 11px 14px;
+  border: 1px solid #e5e7eb;
+  border-left: 4px solid #1d4ed8;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 10px 40px rgb(0 0 0 / 9%);
+  color: #111827;
+  font: 400 13px/1.45 "Veridis Fraud Guard Geist", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  pointer-events: auto;
+  animation: vfg-order-toast-enter 200ms ease-out;
+}
+
+.vfg-order-toast.is-info {
+  border-left-color: #1d4ed8;
+  background: #f8fbff;
+}
+
+.vfg-order-toast.is-success {
+  border-left-color: #059669;
+  background: #f8fffb;
+}
+
+.vfg-order-toast.is-error {
+  border-left-color: #b91c1c;
+  background: #fffafa;
+}
+
+.vfg-order-toast__message {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.vfg-order-toast__close {
+  display: grid;
+  width: 28px;
+  height: 28px;
+  flex: 0 0 28px;
+  padding: 0;
+  place-items: center;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: #6b7280;
+  cursor: pointer;
+  font: 400 20px/1 "Veridis Fraud Guard Geist", ui-sans-serif, system-ui, sans-serif;
+}
+
+.vfg-order-toast__close:hover {
+  background: #eef1f4;
+  color: #111827;
+}
+
+.vfg-order-toast__close:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+  box-shadow: none;
+}
+
+@keyframes vfg-order-spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes vfg-order-toast-enter {
+  from { transform: translateX(20px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@media (max-width: 782px) {
+  .vfg-order-modal-backdrop {
+    padding: 16px;
+  }
+
+  .vfg-order-toasts {
+    right: 16px;
+    bottom: 16px;
+    left: 16px;
+    width: auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .vfg-order-panel__primary,
+  .vfg-order-panel__button,
+  .vfg-order-panel__details > summary,
+  .vfg-order-panel__chevron {
+    transition: none;
+  }
+
+  .vfg-order-panel__spinner {
+    animation-duration: 1.5s;
+  }
+
+  .vfg-order-modal__spinner {
+    animation-duration: 1.5s;
+  }
+
+  .vfg-order-toast {
+    animation-duration: 0.01ms;
+  }
+}

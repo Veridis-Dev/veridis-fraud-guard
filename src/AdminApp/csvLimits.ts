@@ -1,0 +1,2 @@
+export const CSV_IMPORT_MAX_FILE_BYTES = 10 * 1024 * 1024;
+export const CSV_IMPORT_MAX_ROWS = 1000;

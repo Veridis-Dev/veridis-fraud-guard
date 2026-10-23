@@ -1,4 +1,4 @@
-=== Veridis Fraud Guard ===
+=== Veridis Fraud Guard for WooCommerce ===
 Contributors: veridisdev
 Tags: woocommerce, fraud prevention, blocklist, checkout, cash on delivery
 Requires at least: 6.5
@@ -7,15 +7,15 @@ Requires PHP: 8.1
 Requires Plugins: woocommerce
 WC requires at least: 8.2
 WC tested up to: 11.2
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Stop repeat problematic orders and uncollected COD checkouts. Block or hold checkout by email, phone, IP, or domain—100% local on your store.
+Reduce unwanted WooCommerce orders and costly COD returns. Block, hold, or warn at checkout using your own local customer blocklist.
 
 == Description ==
 
-**Veridis Fraud Guard** helps WooCommerce merchants protect their stores from repeat problematic customers, especially repeated Cash on Delivery orders that lead to uncollected parcels, return shipping costs, and operational losses.
+**Veridis Fraud Guard for WooCommerce** helps store owners reduce losses from repeat problematic customers and uncollected Cash on Delivery (COD) orders. Control how matching checkouts are handled without external fraud-scoring services or subscriptions.
 
 Maintain your own blocklist and check each checkout against four exact identifier types:
 
@@ -131,6 +131,12 @@ Deactivation preserves settings and data. Deleting the plugin through WordPress 
 
 == Changelog ==
 
+= 1.0.1 =
+
+* Updated plugin display name to Veridis Fraud Guard for WooCommerce.
+* Improved plugin descriptions for clarity and discoverability.
+* No changes to checkout behavior or stored data.
+
 = 1.0.0 =
 
 * Initial public release of Veridis Fraud Guard Free.
@@ -139,6 +145,10 @@ Deactivation preserves settings and data. Deleting the plugin through WordPress 
 * Includes Activity history, WooCommerce order tools, CSV import and export, HPOS compatibility, and privacy integrations.
 
 == Upgrade Notice ==
+
+= 1.0.1 =
+
+Plugin naming and description improvements only. No functional changes.
 
 = 1.0.0 =
 

@@ -1,9 +1,9 @@
 <?php
 /**
- * Plugin Name: Veridis Fraud Guard
+ * Plugin Name: Veridis Fraud Guard for WooCommerce
  * Plugin URI: https://veridis.dev/products/fraud-guard/
- * Description: Exact-match WooCommerce checkout protection with a local blocklist, activity history, order tools, and CSV transfer.
- * Version: 1.0.0
+ * Description: WooCommerce checkout protection using a merchant-controlled blocklist with Block, Hold, and Warn modes.
+ * Version: 1.0.1
  * Author: Veridis
  * Author URI: https://veridis.dev/
  * License: GPL-2.0-or-later
@@ -18,7 +18,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'VERIDIS_FRAUD_GUARD_VERSION', '1.0.0' );
+define( 'VERIDIS_FRAUD_GUARD_VERSION', '1.0.1' );
 
 $veridis_fraud_guard_path = plugin_dir_path( __FILE__ );
 
